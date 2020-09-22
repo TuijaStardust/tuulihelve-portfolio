@@ -1,0 +1,291 @@
+/* Code by Tuija Stardust / 2020-08-27 */
+/* Edits 2020-09-22 */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Tags */
+
+body {
+    margin: 10px;
+    padding: 0 8px;
+}
+
+header {
+    margin-left: 35px;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-height: auto;  
+}
+
+img.vertical {
+    width: auto;
+    max-height: 68vh;
+}
+
+@media (max-width: 768 ) {
+    img.vertical {
+        width: 100%;
+        max-height: auto;
+    }
+}
+
+hr {
+    margin: 30px 0;
+    border-color: #bbb
+}
+
+/* Typography */
+
+    h1 {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+
+    }
+
+    h2 {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin: 4px 0;
+    }
+
+    p {
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+
+    .contact-info {
+        font-size: 10px;
+        line-height: 14px;
+        margin: 0;
+    }
+
+    .cv-text {
+        font-size: 10px;
+        line-height: 14px;
+        margin: 4px 0;
+    }
+
+    figcaption {
+        max-width: 700px;
+        height: 160px; 
+        font-family: Gisha, Tahoma, Geneva, sans-serif;
+        font-size: 14px;
+        padding: 20px 0 40px 0;
+        text-align: left; 
+    }
+
+    figcaption>a {
+        font-size: 12px;
+    }
+
+    .bold {
+        font-weight: 800;
+    }
+
+    .no-transform {
+        text-transform: none;
+    }
+/* ---- Back to Start button ---- */
+
+.back-to-start {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #262626;
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    order: 1;
+}
+
+.back-to-start>a {
+    font-family: Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* ---- Front Page ---- */
+
+/* Header section */ 
+
+.header-section {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.header-button {
+    margin-right: 4px;
+}
+
+/* Main Content */
+
+.exhibitions-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* Footer section */
+
+footer {
+    max-width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        justify-content: center;
+    }
+
+    .exhibitions-container {
+        flex-direction: column;
+    }
+
+    footer {
+        margin: 40px auto;
+    }
+}
+
+/* ---- CV Pages ---- */
+
+.cv {
+    background-color: #999;
+}
+
+.cv-main {
+    padding: 20px;
+}
+
+/* ---- Exhibitions / Installations pages ---- */
+
+.gallery { 
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.virtapaikka-bg {
+    background-color: lightgrey;
+}
+
+.gallery-image {
+    margin: 10px auto;
+    text-align: center;
+    height: 90vh;
+} 
+
+@media (max-width: 768px) {
+    .gallery-image {
+        height: auto;
+    }
+} 
+
+.portrait {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+.video {
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-navigation {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-navigation.portrait {
+    max-width: 700px;
+}
+
+.gallery-thumbnails {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    order: 2;
+}
+
+.thumbnail-image {
+    object-fit: cover;
+    width: 43px;
+    height: 43px;
+    margin-left: 6px;
+}
+
+.virtapaikka-thumbnail {
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    figcaption {
+        padding: 10px;
+    }
+
+    body {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    header {
+        margin-left: 0;
+    }
+
+    .gallery-navigation {
+        padding: 0 10px;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    /* Crap code */
+
+    .video-caption {
+        height: 280px !important;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    figcaption {
+        height: 200px;
+    }
+
+    .space {
+        height: 300px;
+    }
+
+    .back-to-start {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .gallery-image {
+        margin-bottom: 30px;
+    }
+
+    .gallery-navigation {
+        flex-direction: column;
+    }
+
+    .gallery-thumbnails {
+        order: 1;
+    }
+}
