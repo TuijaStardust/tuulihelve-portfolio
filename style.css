@@ -1,5 +1,15 @@
-/* Code by Tuija Stardust / 2020-08-27 */
+/* Original 2020-08-27 */
+
 /* Edits 2020-09-22 */
+
+/* Edits 2020-10-07*
+Desktop CSS is in the end after @media (min-width: 930px) 
+-> Line 292
+-> (contains "crap code" -> [!important] )
+->(All figure settings are customized for each project/project-page) 
+
+Original settings are needed as they are for the mobile view.
+*/
 
 * {
     box-sizing: border-box;
@@ -23,18 +33,6 @@ figure {
 img {
     width: 100%;
     max-height: auto;  
-}
-
-img.vertical {
-    width: auto;
-    max-height: 68vh;
-}
-
-@media (max-width: 768 ) {
-    img.vertical {
-        width: 100%;
-        max-height: auto;
-    }
 }
 
 hr {
@@ -77,7 +75,7 @@ hr {
         max-width: 700px;
         height: 160px; 
         font-family: Gisha, Tahoma, Geneva, sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         padding: 20px 0 40px 0;
         text-align: left; 
     }
@@ -101,7 +99,7 @@ hr {
     text-align: center;
     background-color: #262626;
     height: 30px;
-    width: 80px;
+    width: 60px;
     padding: 5px;
     order: 1;
 }
@@ -169,8 +167,7 @@ footer {
 /* ---- Exhibitions / Installations pages ---- */
 
 .gallery { 
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 1920px;
 }
 
 .virtapaikka-bg {
@@ -178,32 +175,23 @@ footer {
 }
 
 .gallery-image {
-    margin: 10px auto;
-    text-align: center;
-    height: 90vh;
+    margin: 10px;
+    text-align: left;
 } 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .gallery-image {
         height: auto;
     }
-} 
-
-.portrait {
-    max-width: 700px;
-    margin: 10px auto;
-}
+}  */
 
 .video {
     width: 700px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .gallery-navigation {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -218,6 +206,7 @@ footer {
     height: auto;
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     order: 2;
 }
 
@@ -225,14 +214,23 @@ footer {
     object-fit: cover;
     width: 43px;
     height: 43px;
-    margin-left: 6px;
+}
+
+.thumbnail-image.back-to-start {
+    width: 60px;
+    height: 30px;
+    margin-left: 16px;
+} 
+
+.mg-left{
+margin-left: 6px;
 }
 
 .virtapaikka-thumbnail {
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 929px) {
     figcaption {
         padding: 10px;
     }
@@ -274,7 +272,6 @@ footer {
 
     .back-to-start {
         order: 2;
-        margin-top: 30px;
     }
 
     .gallery-image {
@@ -289,3 +286,482 @@ footer {
         order: 1;
     }
 }
+
+/* DESKTOP SETTINGS */
+
+@media (min-width: 930px) { 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body.frontpage {
+        margin: 10px;
+        padding: 0 8px;
+    }
+
+    .gallery-image {
+        margin: 0;
+    }
+
+    .gallery-navigation {
+        width: 500px;
+        margin: 0;
+    }
+
+    .thumbnail-image.back-to-start {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        background-color: #262626;
+        height: 30px;
+        width: 60px;
+        padding: 5px;
+        order: 1;
+        margin-left: 16px;
+    }
+    
+    .navigation-buttons {
+        display: block;
+    }
+
+    .bm-nav {
+        position: absolute;
+        top: 520px;
+        left: 612px;
+    }
+
+    .bm1-fig {
+        display: block; 
+        width: 100%;
+    } 
+
+    .bm1-img {
+        width: 500px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 40px;
+        margin-left: 70px;
+    }
+
+    .bm1-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 40px;
+        vertical-align: top;
+        padding-top: 360px;
+    }
+
+    .bm2-fig {
+        margin-top: 14px;
+        margin-left: 70px;
+    }
+
+    .bm2-fc {
+        width: 500px;
+    }
+
+    .bm3-img {
+        width: 820px;
+        height: auto;
+    }
+
+    .bm4-img {
+        width: 300px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 40px;
+        margin-left: 70px;
+    }
+
+    .bm4-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 240px;
+        vertical-align: top;
+        padding-top: 360px;
+    }
+    
+    .ho-nav {
+        position: absolute;
+        top: 580px;
+        left: 640px; 
+    }
+    
+    .ho1-fig {
+        margin-top: 14px;
+        margin-left: 70px;
+    }
+
+    .ho1-img {
+        width: 685px;
+        height: auto;
+    }
+
+    .ho1-fc {
+        width: 500px;
+    }
+
+    .ho2-img {
+        width: 804px;
+        height: auto;
+    }
+
+    .ho3-fig {
+        display: block; 
+        width: 100%;
+    }
+
+    .ho3-img {
+        width: 610px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .ho3-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 10px;
+        vertical-align: top;
+        padding-top: 460px;
+    }
+
+    .ltr-nav {
+        position: absolute;
+        top: 400px;
+        left: 878px; 
+    } 
+    
+    .ltr-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+    
+    .ltr-img {
+        width: 1094px;
+        height: auto;
+    }
+    
+    .ltr-fc {
+        width: 500px;
+    }
+
+    .otg-nav {
+        position: absolute;
+        top: 501px;
+        left: 539px; 
+    }
+
+    .otg1-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .otg1-img {
+        width: 885px;
+        height: auto;
+    }
+
+    .otg1-fc {
+        width: 500px;
+    }
+
+    .otg2-fig {
+        display: block; 
+        width: 100%;
+    }
+
+    .otg2-img {
+        width: 400px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 70px;
+    }
+
+    .otg2-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 65px;
+        vertical-align: top;
+        padding-top: 400px;
+    }
+
+    .otg3-fig {
+        margin-top: 240px;
+        margin-left: 14px;
+    }
+
+    .otg3-img {
+        width: 900px;
+        height: auto;
+    }
+
+    .otg3-fc {
+        width: 500px;
+    }
+
+    .buf-nav {
+        position: absolute;
+        top: 493px;
+        left: 588px; 
+    }
+
+    .buf1-fig {
+        display: block; 
+        width: 100%;
+    }
+
+    .buf1-img {
+        width: 500px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 24px;
+        margin-left: 24px;
+    }
+
+    .buf1-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 67px;
+        vertical-align: top;
+        padding-top: 360px;
+    }
+
+    .buf2-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    } 
+
+    .buf2-img {
+        width: 700px;
+        height: auto;
+    }
+
+    .buf2-fc {
+        width: 500px;
+        margin-left: 10px;
+        padding-top: 6px;
+    }
+
+    .buf3-fig {
+        display: block; 
+        width: 100%;
+    }
+
+    .buf3-img {
+        width: 400px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 24px;
+        margin-left: 24px;
+    }
+
+    .buf3-fc {
+        display: inline-block !important;
+        width: 350px;
+        margin-left: 166px;
+        vertical-align: top;
+        padding-top: 360px;
+    }
+
+    .sky-nav {
+        position: absolute;
+        top: 558px;
+        left: 699px; 
+    }
+
+    .sky1-fig {
+        display: block; 
+        width: 100%; 
+    }
+
+    .sky1-img {
+        width: 540px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .sky1-fc {
+        display: inline-block !important;
+        width: 260px;
+        margin-left: 142px;
+        vertical-align: top;
+        padding-top: 380px;
+    }
+
+    .sky2-fig {
+        margin-top: 90px;
+        margin-left: 70px;
+    }
+
+    .sky2-img {
+        width: 550px;
+        height: auto;
+    }
+
+    .sky2-fc {
+        width: 500px;
+    }
+
+    .sky3-fig {
+        margin-top: 40px;
+        margin-left: 70px;
+    }
+
+    .sky3-img {
+        width: 650px;
+        height: auto;
+    }
+
+    .sky3-fc {
+        width: 500px;
+        padding-left: 20px;
+    }
+
+    .wtr-nav {
+        position: absolute;
+        top: 559px;
+        left: 690px;
+    }
+
+    .wtr1-fig {
+        display: block; 
+        width: 100%; 
+    }
+
+    .wtr1-img {
+        width: 530px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .wtr1-fc {
+        display: inline-block !important;
+        width: 260px;
+        margin-left: 142px;
+        vertical-align: top;
+        padding-top: 440px;
+    }
+
+    .wtr2-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .wtr2-img {
+        width: 900px;
+        height: auto;
+    }
+
+    .wtr2-fc {
+        width: 650px;
+    }
+
+    .wtr3-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .wtr3-img {
+        width: 776px;
+        height: auto;
+    }
+
+    .wtr3-fc {
+        width: 650px;
+    }
+
+    .val-nav {
+        position: absolute;
+        top: 548px;
+        left: 756px;
+    }
+
+    .val1-fig {
+        display: block; 
+        width: 100%; 
+    }
+
+    .val1-img {
+        width: 676px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .val1-fc {
+        display: inline-block !important;
+        width: 260px;
+        margin-left: 62px;
+        vertical-align: top;
+        padding-top: 380px;
+    }
+
+    .val2-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .val2-img {
+        width: 879px;
+        height: auto;
+    }
+
+    .val2-fc {
+        width: 650px;
+    }
+
+    .val3-fig {
+        display: block; 
+        width: 100%; 
+    }
+
+    .val3-img {
+        width: 676px;
+        height: auto;
+        display: inline-block !important;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .val3-fc {
+        display: inline-block !important;
+        width: 260px;
+        margin-left: 62px;
+        vertical-align: top;
+        padding-top: 380px;
+    }
+
+    .vir-nav {
+        position: absolute;
+        top: 648px;
+        left: 756px;
+    }
+
+    .vir1-fig {
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+
+    .vir1-img {
+        width: 800px;
+        height: auto;
+    }
+
+    .vir1-fc {
+        width: 650px;
+    }
+
+
+
+
+}
+    
